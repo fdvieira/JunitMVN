@@ -68,7 +68,7 @@ def build() {
 }
 
 def staticAnalysis() {
-  //  sh("mvn sonar:sonar -Dsonar.login=d36b6a7a0e007f4969addc2f3abed311db7c1f79")
+  //  sh("mvn sonar:sonar")
 }
 
 def unitTesting() {
