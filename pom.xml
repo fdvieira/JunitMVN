@@ -26,6 +26,10 @@
       <id>nexus-snapshots</id>
       <url>https://repo.critical.pt/repository/maven-snapshots/</url>
    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>https://repo.critical.pt/repository/maven-releases//</url>
+    </repository>
 </distributionManagement>
 
   <build>
