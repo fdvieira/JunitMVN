@@ -84,7 +84,9 @@ def unitTesting() {
 	echo "bfa testing"
 }
 
-def deploy() {}
+def deploy() {
+    sh 'mvn clean deploy -Dmaven.test.skip=true'
+}
 
 def functionalTesting() {}
 
