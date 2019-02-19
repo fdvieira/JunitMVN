@@ -21,13 +21,6 @@
     </dependency>
   </dependencies>
 
-  <repositories>
-      <repository>
-      <id>nexus-releases</id>
-      <url>https://repo.critical.pt/repository/maven-releases//</url>
-    </repository>
-  </repositories>
-
   <distributionManagement>
    <snapshotRepository>
       <id>nexus-snapshots</id>
