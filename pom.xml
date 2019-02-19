@@ -13,6 +13,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <repository>
+        <id>csw-nexus-maven-central</id>
+        <url>https://repo.critical.pt/repository/maven-central/</url>
+  </repository>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
