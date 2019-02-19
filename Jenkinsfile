@@ -68,7 +68,15 @@ def build() {
 }
 
 def staticAnalysis() {
-  //  sh("mvn sonar:sonar")
+    withSonarQubeEnv('SonarQube-Techops') {
+        sh "mvn sonar:sonar"
+    }
+    timeout(time: 1, unit: 'HOURS') {
+        def qg = waitForQualityGate()
+        if (qg.status != 'OK') {
+            error "Pipeline aborted due to SonarQube quality gate failure: ${qg.status}"
+        }
+    }
 }
 
 def unitTesting() {
@@ -76,7 +84,9 @@ def unitTesting() {
 	echo "bfa testing"
 }
 
-def deploy() {}
+def deploy() {
+    sh 'mvn clean deploy -Dmaven.test.skip=true'
+}
 
 def functionalTesting() {}
 
